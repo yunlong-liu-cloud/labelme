@@ -134,6 +134,7 @@ jobs:
           export PATH="$HOME/miniconda/bin:$PATH"
           # Build the standalone executable
           pip install 'pyinstaller!=3.4'  # 3.4 raises error
+          pip install 'setuptools<45.0.0'
           pyinstaller labelme.spec
           dist/labelme --version
         fi
